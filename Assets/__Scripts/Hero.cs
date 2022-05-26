@@ -126,7 +126,7 @@ public class Hero : MonoBehaviour
         pu.AbsorbedBy(this.gameObject);
     }
 
-    public float shieldLevel
+    public float shieldLevel // ENCAPSULATION
     {
         get { return (_shieldLevel); }
         set
@@ -140,7 +140,7 @@ public class Hero : MonoBehaviour
         }
     }
 
-    Weapon GetEmptyWeaponSlot()
+    Weapon GetEmptyWeaponSlot() // ABSTRACTION
     {
         for (int i = 0; i < weapons.Length; i++)
         {
@@ -152,7 +152,7 @@ public class Hero : MonoBehaviour
         return null;
     }
 
-    void ClearWeapons()
+    void ClearWeapons() // ABSTRACTION
     {
         foreach (Weapon w in weapons)
         {

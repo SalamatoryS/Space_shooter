@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy_1 : Enemy
+public class Enemy_1 : Enemy // INHERITANCE
 {
     [Header("Set in Inspector")]
     public float waveFrequency = 2;
@@ -18,7 +18,7 @@ public class Enemy_1 : Enemy
         birthTime = Time.time;
     }
 
-    public override void Move()
+    public override void Move() // POLYMORPHISM
     {
         Vector3 tempPos = pos;
         float age = Time.time - birthTime;
