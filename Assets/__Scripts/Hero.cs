@@ -23,7 +23,7 @@ public class Hero : MonoBehaviour
     public delegate void WeaponFireDelegate();
     public WeaponFireDelegate fireDelegate;
 
-    private void Awake()
+    private void Start()
     {
         if (S == null)
         {
@@ -34,6 +34,8 @@ public class Hero : MonoBehaviour
             Debug.LogError("Hero.Awake() = Atempeted to assign second Hero.S!");
         }
         //fireDelegate += TempFire;
+        ClearWeapons();
+        weapons[0].SetType(WeaponType.blaster);
     }
     private void Update()
     {

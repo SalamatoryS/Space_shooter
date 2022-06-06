@@ -14,7 +14,7 @@ public class WeaponDefinition
     public Color color = Color.white;
     public GameObject projectilePrefab;
     public Color projectileColor = Color.white;
-    public float damageOnHit = 0;
+    public float damageOnHit = 1;
     public float continiousDamage = 0;
     public float delayBetweenShots = 0;
     public float velocity = 20;
