@@ -5,6 +5,7 @@ using UnityEngine;
 public class Hero : MonoBehaviour
 {
     static public Hero S;
+
     [Header("Set in Inspector")]
     public float speed = 30;
     public float rollMult = -45;
@@ -128,7 +129,7 @@ public class Hero : MonoBehaviour
         pu.AbsorbedBy(this.gameObject);
     }
 
-    public float shieldLevel // ENCAPSULATION
+    public float shieldLevel 
     {
         get { return (_shieldLevel); }
         set
@@ -142,7 +143,7 @@ public class Hero : MonoBehaviour
         }
     }
 
-    Weapon GetEmptyWeaponSlot() // ABSTRACTION
+    Weapon GetEmptyWeaponSlot() 
     {
         for (int i = 0; i < weapons.Length; i++)
         {
@@ -154,7 +155,7 @@ public class Hero : MonoBehaviour
         return null;
     }
 
-    void ClearWeapons() // ABSTRACTION
+    void ClearWeapons() 
     {
         foreach (Weapon w in weapons)
         {
